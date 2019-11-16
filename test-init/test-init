@@ -1,4 +1,22 @@
 #!/usr/bin/env python
 import os
+import sys
 
-os.system("cp -r ~/repositories/tools/test-init/source-files/* ./")
+message = "Please supply arguments to...test-init...in lowercase specifying the languages for which you would like to initialize testing in the current directory..."
+error = "Those arguments are invalid...\n"
+
+if len(sys.argv) == 2:
+    if sys.argv[1] == "c":
+        os.system("cp ~/repositories/tools/test-init/source-files/CuTest.c ~/repositories/tools/test-init/source-files/CuTest.h ./")
+
+    elif sys.argv[1] == "c++":
+        os.system("cp ~/repositories/tools/test-init/source-files/lest.hpp ./")
+    
+    else:
+        print(error + message)
+
+elif len(sys.argv) == 1:
+    os.system("cp -r ~/repositories/tools/test-init/source-files/* ./")
+
+else:
+    print(message)
