@@ -7,7 +7,7 @@ error = "Those arguments are invalid...\n"
 
 if len(sys.argv) == 2:
     if sys.argv[1] == "c":
-        os.system("cp ~/repositories/tools/test-init/source-files/CuTest.c ~/repositories/tools/test-init/source-files/CuTest.h ./")
+        os.system("cp ~/repositories/tools/test-init/source-files/Test.c ~/repositories/tools/test-init/source-files/Test.h ./")
 
     elif sys.argv[1] == "c++":
         os.system("cp ~/repositories/tools/test-init/source-files/lest.hpp ./")
