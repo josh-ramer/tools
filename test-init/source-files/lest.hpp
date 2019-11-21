@@ -6,6 +6,12 @@
 // Distributed under the Boost Software License, Version 1.0. (See accompanying
 // file LICENSE.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
+/******ADD TO C++ TESTING FILE IOT RUN TESTS AND VIEW SUMMARY**************
+    if (int failures = lest::run(tests, argc, argv)) return failures;
+    else return cout << "\nAll tests passed!!!\n", EXIT_SUCCESS;
+*/
+
+
 #ifndef LEST_LEST_HPP_INCLUDED
 #define LEST_LEST_HPP_INCLUDED
 
