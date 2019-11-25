@@ -8,7 +8,7 @@
 
 /******ADD TO C++ TESTING FILE IOT RUN TESTS AND VIEW SUMMARY**************
     if (int failures = lest::run(tests, argc, argv)) return failures;
-    else return cout << "\nAll tests passed!!!\n", EXIT_SUCCESS;
+    else return cout << "All tests passed!!!\n", EXIT_SUCCESS;
 */
 
 
