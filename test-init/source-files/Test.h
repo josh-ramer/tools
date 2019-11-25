@@ -78,7 +78,8 @@ void AssertPtrEquals_LineMsg(Test* tc,
 
 #define Fail(tc, ms)                        Fail_Line(  (tc), __FILE__, __LINE__, NULL, (ms))
 #define Assert(tc, ms, cond)                Assert_Line((tc), __FILE__, __LINE__, (ms), (cond))
-#define AssertTrue(tc, cond)                Assert_Line((tc), __FILE__, __LINE__, "assert failed", (cond))
+#define AssertTrue(tc, cond)                Assert_True((tc), __FILE__, __LINE__, "assert-true failed: condition was false", (cond))
+#define AssertFalse(tc, cond)                Assert_False((tc), __FILE__, __LINE__, "assert-false failed: condition was true", (cond))
 
 #define AssertStrEquals(tc,ex,ac)           AssertStrEquals_LineMsg((tc),__FILE__,__LINE__,NULL,(ex),(ac))
 #define AssertStrEquals_Msg(tc,ms,ex,ac)    AssertStrEquals_LineMsg((tc),__FILE__,__LINE__,(ms),(ex),(ac))

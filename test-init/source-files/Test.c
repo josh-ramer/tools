@@ -194,6 +194,18 @@ void Assert_Line(Test* tc, const char* file, int line, const char* message, int 
 	Fail_Line(tc, file, line, NULL, message);
 }
 
+void Assert_True(Test* tc, const char* file, int line, const char* message, int condition)
+{
+	if (condition) return;
+	Fail_Line(tc, file, line, NULL, message);
+}
+
+void Assert_False(Test* tc, const char* file, int line, const char* message, int condition)
+{
+	if (!condition) return;
+	Fail_Line(tc, file, line, NULL, message);
+}
+
 void AssertStrEquals_LineMsg(Test* tc, const char* file, int line, const char* message, 
 	const char* expected, const char* actual)
 {
