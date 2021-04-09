@@ -20,7 +20,7 @@ CFFI_VERSION="$(python -c 'import cffi; print(cffi.__version__)')"
 #Install Miniconda
 cd "${DTARGET}"
 wget -c https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && bash Miniconda3-latest-Linux-x86_64.sh -bfp "${DTARGET}"
-
+export PATH="${DTARGET}:$PATH"
 #Adds the conda libraries directly to the colab path.
 ln -s "/usr/local/lib/python${PYTHON_VERSION}/dist-packages" "/usr/local/lib/python${PYTHON_VERSION}/site-packages"
 
